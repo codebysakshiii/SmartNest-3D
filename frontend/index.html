@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b1110">
+    <title>SmartNest AI | Intelligent Living</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-shell">
+
+    <aside class="sidebar">
+        <a class="brand" href="#">
+            <span class="brand-icon">⌂</span>
+            <span>smartnest<span class="brand-ai">.ai</span></span>
+        </a>
+
+        <div class="home-selector">
+            <div class="home-avatar">S</div>
+            <div>
+                <strong>Smart Residence</strong>
+                <small>My smart home</small>
+            </div>
+            <span class="selector-arrow">⌄</span>
+        </div>
+
+        <p class="menu-label">WORKSPACE</p>
+
+        <nav class="navigation">
+            <button class="nav-item active" data-page="overview">
+                <span>◫</span> Overview
+            </button>
+            <button class="nav-item" data-page="house">
+                <span>⌂</span> 3D House
+            </button>
+            <button class="nav-item" data-page="rooms">
+                <span>▦</span> Rooms & Devices
+            </button>
+            <button class="nav-item" data-page="automation">
+                <span>⟳</span> Automation
+            </button>
+            <button class="nav-item" data-page="energy">
+                <span>ϟ</span> Energy Analytics
+            </button>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="system-status">
+                <span class="status-dot"></span>
+                <div>
+                    <strong>System operational</strong>
+                    <small>All systems ready</small>
+                </div>
+            </div>
+
+            <button class="nav-item" data-page="settings">
+                <span>⚙</span> Settings
+            </button>
+
+            <div class="profile">
+                <div class="profile-avatar">SB</div>
+                <div class="profile-info">
+                    <strong>Home Owner</strong>
+                    <small>Administrator</small>
+                </div>
+                <span class="profile-menu">•••</span>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div class="breadcrumb">
+                <span>Workspace</span>
+                <span class="breadcrumb-divider">/</span>
+                <strong id="page-title">Overview</strong>
+            </div>
+
+            <div class="topbar-actions">
+                <span class="live-indicator">
+                    <span class="status-dot"></span> LIVE DEMO
+                </span>
+                <button class="icon-button" id="theme-toggle" aria-label="Toggle theme">☼</button>
+                <button class="profile-avatar top-avatar" aria-label="Profile">SB</button>
+            </div>
+        </header>
+
+        <section class="page-content">
+
+            <div class="welcome-row">
+                <div>
+                    <p class="eyebrow">YOUR HOME, INTELLIGENTLY CONNECTED</p>
+                    <h1 id="welcome-heading">Good morning, <span>Home Owner.</span></h1>
+                    <p class="welcome-description">
+                        Everything in your home, beautifully under control.
+                    </p>
+                </div>
+
+                <button class="primary-button" id="quick-action">
+                    <span>＋</span> Quick action
+                </button>
+            </div>
+
+            <section class="stats-grid">
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span class="stat-icon green-icon">⌂</span>
+                        <span class="stat-badge">● Online</span>
+                    </div>
+                    <p class="stat-label">Home status</p>
+                    <h2>All systems <span>go</span></h2>
+                    <p class="stat-foot">Your home is running smoothly</p>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span class="stat-icon yellow-icon">☼</span>
+                        <span class="stat-badge neutral-badge" id="light-percentage">67% active</span>
+                    </div>
+                    <p class="stat-label">Smart lighting</p>
+                    <h2><span id="lights-active">4</span> <small>/ 6 rooms</small></h2>
+                    <p class="stat-foot">Manage your room lighting</p>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span class="stat-icon blue-icon">ϟ</span>
+                        <span class="stat-badge green-badge">Demo data</span>
+                    </div>
+                    <p class="stat-label">Energy today</p>
+                    <h2><span id="energy-value">8.4</span> <small>kWh</small></h2>
+                    <p class="stat-foot">Simulated daily consumption</p>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span class="stat-icon purple-icon">♧</span>
+                        <span class="stat-badge neutral-badge">Indoor</span>
+                    </div>
+                    <p class="stat-label">Temperature</p>
+                    <h2>24.5<small>°C</small></h2>
+                    <p class="stat-foot">Simulated sensor reading</p>
+                </article>
+            </section>
+
+            <section class="dashboard-grid">
+
+                <article class="panel house-panel" id="house-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <p class="eyebrow">INTERACTIVE ENVIRONMENT</p>
+                            <h2>Your 3D residence</h2>
+                            <p class="panel-subtitle">Explore your home in three dimensions.</p>
+                        </div>
+
+                        <div class="floor-switcher">
+                            <button class="floor-button active" data-floor="0">Ground</button>
+                            <button class="floor-button" data-floor="1">First floor</button>
+                        </div>
+                    </div>
+
+                    <div class="house-stage" id="house-stage">
+                        <div class="house-placeholder">
+                            <div class="placeholder-orbit orbit-one"></div>
+                            <div class="placeholder-orbit orbit-two"></div>
+                            <div class="placeholder-house">⌂</div>
+                            <span class="placeholder-tag">3D ENVIRONMENT</span>
+                            <h3>Your home is taking shape.</h3>
+                            <p>The interactive Three.js house will appear here.</p>
+                            <button class="outline-button" id="load-house">Initialize 3D house ↗</button>
+                        </div>
+
+                        <div class="stage-footer">
+                            <span><i class="legend-dot"></i> Interactive preview</span>
+                            <span>SmartNest 3D Engine</span>
+                        </div>
+                    </div>
+
+                    <div class="house-footer">
+                        <div>
+                            <span class="mini-label">PROPERTY TYPE</span>
+                            <strong>Two-storey residence</strong>
+                        </div>
+                        <div>
+                            <span class="mini-label">CONNECTED ROOMS</span>
+                            <strong>6 spaces</strong>
+                        </div>
+                        <button class="text-button" data-page="house">Explore house ↗</button>
+                    </div>
+                </article>
+
+                <article class="panel devices-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <p class="eyebrow">LIVE CONTROLS</p>
+                            <h2>Room devices</h2>
+                            <p class="panel-subtitle">Control individual spaces.</p>
+                        </div>
+                        <button class="icon-button" id="all-lights-toggle" aria-label="Toggle all lights">⏻</button>
+                    </div>
+
+                    <div class="room-list" id="room-list">
+
+                        <div class="room-row" data-room="Living Room">
+                            <div class="room-icon living-icon">⌂</div>
+                            <div class="room-info">
+                                <strong>Living Room</strong>
+                                <small>Ground floor · 2 devices</small>
+                            </div>
+                            <div class="room-control">
+                                <span class="room-light-status">ON</span>
+                                <button class="toggle-switch on" role="switch" aria-checked="true" aria-label="Living Room lights"></button>
+                            </div>
+                        </div>
+
+                        <div class="room-row" data-room="Kitchen">
+                            <div class="room-icon kitchen-icon">♨</div>
+                            <div class="room-info">
+                                <strong>Kitchen</strong>
+                                <small>Ground floor · 2 devices</small>
+                            </div>
+                            <div class="room-control">
+                                <span class="room-light-status">ON</span>
+                                <button class="toggle-switch on" role="switch" aria-checked="true" aria-label="Kitchen lights"></button>
+                            </div>
+                        </div>
+
+                        <div class="room-row" data-room="Master Bedroom">
+                            <div class="room-icon bedroom-icon">▤</div>
+                            <div class="room-info">
+                                <strong>Master Bedroom</strong>
+                                <small>First floor · 3 devices</small>
+                            </div>
+                            <div class="room-control">
+                                <span class="room-light-status">ON</span>
+                                <button class="toggle-switch on" role="switch" aria-checked="true" aria-label="Master Bedroom lights"></button>
+                            </div>
+                        </div>
+
+                        <div class="room-row" data-room="Study Room">
+                            <div class="room-icon study-icon">▧</div>
+                            <div class="room-info">
+                                <strong>Study Room</strong>
+                                <small>First floor · 2 devices</small>
+                            </div>
+                            <div class="room-control">
+                                <span class="room-light-status">OFF</span>
+                                <button class="toggle-switch" role="switch" aria-checked="false" aria-label="Study Room lights"></button>
+                            </div>
+                        </div>
+
+                        <div class="room-row" data-room="Pooja Room">
+                            <div class="room-icon pooja-icon">✧</div>
+                            <div class="room-info">
+                                <strong>Pooja Room</strong>
+                                <small>Ground floor · 1 device</small>
+                            </div>
+                            <div class="room-control">
+                                <span class="room-light-status">ON</span>
+                                <button class="toggle-switch on" role="switch" aria-checked="true" aria-label="Pooja Room lights"></button>
+                            </div>
+                        </div>
+
+                        <div class="room-row" data-room="Balcony">
+                            <div class="room-icon balcony-icon">☼</div>
+                            <div class="room-info">
+                                <strong>Balcony</strong>
+                                <small>First floor · 1 device</small>
+                            </div>
+                            <div class="room-control">
+                                <span class="room-light-status">OFF</span>
+                                <button class="toggle-switch" role="switch" aria-checked="false" aria-label="Balcony lights"></button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="devices-footer">
+                        <span><span class="status-dot"></span> <span id="devices-online">4</span> active room lights</span>
+                        <button class="text-button" data-page="rooms">Manage devices ↗</button>
+                    </div>
+                </article>
+
+            </section>
+
+            <section class="bottom-grid">
+
+                <article class="panel automation-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <p class="eyebrow">INTELLIGENT ROUTINES</p>
+                            <h2>Home automation</h2>
+                        </div>
+                        <span class="automation-count">02 RULES</span>
+                    </div>
+
+                    <div class="automation-card">
+                        <div class="automation-symbol">☼</div>
+                        <div class="automation-details">
+                            <strong>Good morning</strong>
+                            <p>Switch on selected lights at 7:00 AM.</p>
+                            <span class="rule-tag">TIME-BASED RULE</span>
+                        </div>
+                        <button class="toggle-switch on automation-toggle" role="switch" aria-checked="true" aria-label="Good morning automation"></button>
+                    </div>
+
+                    <div class="automation-card">
+                        <div class="automation-symbol evening-symbol">☾</div>
+                        <div class="automation-details">
+                            <strong>Night mode</strong>
+                            <p>Dim selected lights at 10:00 PM.</p>
+                            <span class="rule-tag">TIME-BASED RULE</span>
+                        </div>
+                        <button class="toggle-switch on automation-toggle" role="switch" aria-checked="true" aria-label="Night mode automation"></button>
+                    </div>
+
+                    <button class="secondary-button" data-page="automation">Manage automations →</button>
+                </article>
+
+                <article class="panel energy-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <p class="eyebrow">POWER INTELLIGENCE</p>
+                            <h2>Energy overview</h2>
+                            <p class="panel-subtitle">Illustrative consumption data.</p>
+                        </div>
+                        <span class="energy-period">7 days</span>
+                    </div>
+
+                    <div class="energy-summary">
+                        <div>
+                            <h3 id="weekly-energy">48.6 <small>kWh</small></h3>
+                            <p>Weekly simulated usage</p>
+                        </div>
+                        <span class="energy-trend">Demo forecast</span>
+                    </div>
+
+                    <div class="chart-container" id="energy-chart">
+                        <div class="chart-y-labels">
+                            <span>12</span>
+                            <span>8</span>
+                            <span>4</span>
+                            <span>0</span>
+                        </div>
+
+                        <div class="chart-bars">
+                            <div class="chart-column"><div class="chart-bar" style="height:48%"></div><span>Mon</span></div>
+                            <div class="chart-column"><div class="chart-bar" style="height:67%"></div><span>Tue</span></div>
+                            <div class="chart-column"><div class="chart-bar" style="height:41%"></div><span>Wed</span></div>
+                            <div class="chart-column"><div class="chart-bar" style="height:77%"></div><span>Thu</span></div>
+                            <div class="chart-column"><div class="chart-bar" style="height:57%"></div><span>Fri</span></div>
+                            <div class="chart-column"><div class="chart-bar" style="height:89%"></div><span>Sat</span></div>
+                            <div class="chart-column"><div class="chart-bar today-bar" style="height:62%"></div><span>Sun</span></div>
+                        </div>
+                    </div>
+
+                    <div class="chart-note">
+                        <span class="legend-dot"></span>
+                        <span>Illustrative data · Not a real meter reading</span>
+                    </div>
+                </article>
+
+            </section>
+
+            <footer class="app-footer">
+                <span>SmartNest AI <span class="footer-separator">·</span> Intelligent Living Platform</span>
+                <span><span class="status-dot"></span> Frontend demo mode</span>
+            </footer>
+
+        </section>
+    </main>
+
+</div>
+
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>
